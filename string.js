@@ -44,7 +44,7 @@ exports.containsUpper =function(str){
                 throw PasswordMessage("Password has uppercase letter");
             }
         }
-        if(hasUpper = false){
+        if(hasUpper == false){
             throw PasswordMessage("Password does not have an uppercase letter");
         }
     }
@@ -64,7 +64,7 @@ exports.containsLower =function(str){
                 throw PasswordMessage("Password has lowercase letter");
             }
         }
-        if(hasLower = false){
+        if(hasLower == false){
             throw PasswordMessage("Password does not have an lowercase letter")
         }
     }
@@ -83,7 +83,7 @@ exports.containsNumerical =function(str){
                 throw PasswordMessage("Password has a number");
             }
         }
-        if(hasNumber = false){
+        if(hasNumber == false){
             throw PasswordMessage("Password does not have a number");
         }
     }
@@ -104,7 +104,9 @@ exports.containsSpecial =function(str){
                     hasSpecial = true;
                     throw PasswordMessage("Password has a special character")
                 }
-                if
+                if (hasSpecial == false){
+                    throw PasswordMessage("Password does not have a special character");
+                }
             }
         }
     }
